@@ -62,22 +62,26 @@ const zucchine = [
 
 const array1 = [];
 const array2 = [];
+peso1 = 0;
+peso2 =0;
 
 for(let i=0; i < zucchine.length; i++) {
     if (zucchine[i].lunghezza < 15 ) {
-        array1.push(zucchine[i])
+        array1.push(zucchine[i]);
+        peso1 += zucchine[i].peso;
     }
     else {
-        array2.push(zucchine[i])
+        array2.push(zucchine[i]);
+        peso2 += zucchine[i].peso;
     }
 }
 
-console.log("Primo Array");
+console.log("Primo Array: peso "+peso1);
 for (let i=0; i < array1.length; i++) {
-    console.log(array1[i].varietà)
+    console.log(array1[i].varietà);
 }
 
-console.log("Secondo Array");
+console.log("Secondo Array peso "+peso2);
 for (let i=0; i < array2.length; i++) {
-    console.log(array2[i].varietà)
+    console.log(array2[i].varietà);
 }
